@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use \App\Http\Requests\SendMailRequest;
 
 class MailController extends Controller
 {
@@ -23,7 +23,7 @@ class MailController extends Controller
      */
     public function create()
     {
-        //
+        return view('mails.create');
     }
 
     /**
@@ -32,8 +32,8 @@ class MailController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SendMailRequest $request)
     {
-        //
+        print_r($request->all());
     }
 }
