@@ -81,6 +81,68 @@ body {
             }
         }
 
+
+
+
+
+        // mail sending form 
+        .mail-sending-form {
+            padding: 64px;
+
+            .form-input {
+                margin-bottom: 8px;
+
+
+                label {
+                    float: left;
+                    display: block;
+                    font-weight: 600;
+                    font-size: 18px;
+                    width: 160px;
+                    
+                }
+
+                input[type="text"] {
+                    min-width: 240px;
+                    padding: 8px;
+                }
+
+                .error {
+                    color: $secondary;
+                    font-size: 14px;
+                }
+
+               
+
+            }
+
+            button {
+                margin-left: 160px;
+                margin-top: 8px;
+                padding: 0px;
+                background-color: $white;
+                text-transform: uppercase;
+                border: none;
+                font-size: 18px;
+
+                svg {
+                    margin-right: 8px;
+                    color: $white;
+                    background-color: lighten($primary, 0.9);
+                }
+
+                &:hover {
+                    color: $secondary;
+                    cursor: pointer;
+                }
+            }
+
+          
+        }
+
+
+
+
     }
 
     footer {

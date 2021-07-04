@@ -59,6 +59,45 @@ body {
 .app .container .content .read-more-link svg {
   color: #ff4d72;
 }
+.app .container .mail-sending-form {
+  padding: 64px;
+}
+.app .container .mail-sending-form .form-input {
+  margin-bottom: 8px;
+}
+.app .container .mail-sending-form .form-input label {
+  float: left;
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  width: 160px;
+}
+.app .container .mail-sending-form .form-input input[type=text] {
+  min-width: 240px;
+  padding: 8px;
+}
+.app .container .mail-sending-form .form-input .error {
+  color: #ff4d72;
+  font-size: 14px;
+}
+.app .container .mail-sending-form button {
+  margin-left: 160px;
+  margin-top: 8px;
+  padding: 0px;
+  background-color: white;
+  text-transform: uppercase;
+  border: none;
+  font-size: 18px;
+}
+.app .container .mail-sending-form button svg {
+  margin-right: 8px;
+  color: white;
+  background-color: #364a5f;
+}
+.app .container .mail-sending-form button:hover {
+  color: #ff4d72;
+  cursor: pointer;
+}
 .app footer {
   margin-top: 24px;
   display: flex;
