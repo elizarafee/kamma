@@ -23,13 +23,15 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($mails as $mail) 
       <tr>
-        <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
+        <td>{{ $mail->id }}</td>
+        <td>{{ $mail->sender_name }}</td>
+        <td>{{ $mail->receiver_name }}</td>
+        <td>{{ $mail->receiver_email }}</td>
+        <td>{{ $mail->created_at }}</td>
       </tr>
+      @endforeach 
     </tbody>
   </table>
 

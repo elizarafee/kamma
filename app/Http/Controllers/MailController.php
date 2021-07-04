@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\MailLog;
 use \App\Http\Requests\SendMailRequest;
 
 class MailController extends Controller
@@ -13,7 +15,8 @@ class MailController extends Controller
      */
     public function index()
     {
-        return view('mails.index');
+        $mails = MailLog::orderBy('created_at', 'desc')->get();
+        return view('mails.index', ['mails' => $mails]);
     }
 
     /**
@@ -35,5 +38,20 @@ class MailController extends Controller
     public function store(SendMailRequest $request)
     {
         print_r($request->all());
+
+
+        $mail_data = array(
+            'sender_name' => $request->get('name'),
+            'receiver_name' => $request->get('friend_name'),
+            'receiver_email' => $request->get('friend_email'),
+            'email_message' => 'Dummy text for email ...',
+            'created_at' => date('Y-m-d H:i:s')
+        );
+
+
+        MailLog::create($mail_data);
+
+
+        return redirect('/emails')->with('success', 'Email successfully sent to '.$request->get('friend_name'));
     }
 }
