@@ -1,6 +1,29 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: lightgrey;
+}
+
 .app {
-  background-color: blue;
+  max-width: 860px;
+  min-height: 600px;
+  margin: 60px auto;
+}
+.app header {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 576px) {
+  .app header {
+    justify-content: flex-end;
+  }
+}
+.app header .svg-logo {
+  width: 200px;
 }
 .app .container {
   background-color: white;
+}
+.app footer {
+  background-color: red;
 }

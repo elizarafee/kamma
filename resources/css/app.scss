@@ -1,7 +1,43 @@
+// variables : colours
+$primary: #34485c;
+$secondary: #ff4d72;
+$grey: grey;
+$light-grey: lightgrey;
+$black: black;
+$white: white;
+
+// base
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: $light-grey;
+}
+
+// app
 .app {
-    background-color: blue;
+    max-width: 860px;
+    min-height: 600px;
+    margin: 60px auto;
+
+    header {
+        display: flex;
+        justify-content: center;
+
+        // larger than mobile screen
+        @media (min-width: 576px) { 
+            justify-content: flex-end;
+         }
+
+        .svg-logo {
+            width: 200px;
+        }
+    }
 
     .container {
         background-color: white;
+    }
+
+    footer {
+        background-color: red;
     }
 }
