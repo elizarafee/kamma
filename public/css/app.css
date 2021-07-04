@@ -25,5 +25,45 @@ body {
   background-color: white;
 }
 .app footer {
-  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+.app footer .footer-list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.app footer .footer-list li {
+  margin: 2px;
+  padding: 0px;
+}
+.app footer .footer-list li a {
+  color: black;
+  text-decoration: none;
+}
+.app footer .footer-list li a:hover {
+  color: #ff4d72;
+}
+@media (min-width: 576px) {
+  .app footer .footer-list {
+    flex-direction: row;
+  }
+  .app footer .footer-list li {
+    margin: 0px 8px;
+    padding: 0px;
+    padding-right: 8px;
+    border-right: 3px solid #34485c;
+  }
+  .app footer .footer-list li:last-child {
+    border-right: none;
+  }
+  .app footer .footer-list li a {
+    color: black;
+    text-decoration: none;
+  }
+  .app footer .footer-list li a:hover {
+    color: #ff4d72;
+  }
 }
