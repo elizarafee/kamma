@@ -38,6 +38,7 @@ body {
     }
 
     footer {
+        margin-top: 24px;
         display: flex;
         justify-content: center;
 
@@ -54,10 +55,11 @@ body {
 
                 a {
                     color: $black;
-                    text-decoration: none;
+                    text-decoration: underline;
 
                     &:hover {
                         color: $secondary;
+                        text-decoration: none;
                     }
                 }
             }
@@ -72,15 +74,6 @@ body {
                     border-right: 3px solid $primary;
                     &:last-child {
                         border-right: none;
-                    }
-
-                    a {
-                        color: $black;
-                        text-decoration: none;
-    
-                        &:hover {
-                            color: $secondary;
-                        }
                     }
                 }
              }

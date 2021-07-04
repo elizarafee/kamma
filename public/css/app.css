@@ -25,6 +25,7 @@ body {
   background-color: white;
 }
 .app footer {
+  margin-top: 24px;
   display: flex;
   justify-content: center;
 }
@@ -41,10 +42,11 @@ body {
 }
 .app footer .footer-list li a {
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .app footer .footer-list li a:hover {
   color: #ff4d72;
+  text-decoration: none;
 }
 @media (min-width: 576px) {
   .app footer .footer-list {
@@ -58,12 +60,5 @@ body {
   }
   .app footer .footer-list li:last-child {
     border-right: none;
-  }
-  .app footer .footer-list li a {
-    color: black;
-    text-decoration: none;
-  }
-  .app footer .footer-list li a:hover {
-    color: #ff4d72;
   }
 }
