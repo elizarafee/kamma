@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,6 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/emails', [MailController::class, 'index']);
+Route::get('/emails/create', [MailController::class, 'create']);
+Route::post('/emails', [MailController::class, 'store']);
