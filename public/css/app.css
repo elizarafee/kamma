@@ -12,6 +12,7 @@ body {
 .app header {
   display: flex;
   justify-content: center;
+  margin-bottom: 24px;
 }
 @media (min-width: 576px) {
   .app header {
@@ -23,6 +24,40 @@ body {
 }
 .app .container {
   background-color: white;
+}
+.app .container .content {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  padding: 32px;
+}
+.app .container .content .title {
+  font-size: 24px;
+  margin: 4px 0;
+}
+.app .container .content .sub-title {
+  font-size: 18px;
+  font-weight: 500;
+  width: 70%;
+}
+.app .container .content p .link {
+  color: #ff4d72;
+}
+.app .container .content p .link:hover {
+  color: #34485c;
+}
+.app .container .content .read-more-link {
+  text-transform: uppercase;
+  color: gray;
+  text-align: right;
+  float: right;
+  text-decoration: none;
+}
+.app .container .content .read-more-link:hover {
+  color: #34485c;
+}
+.app .container .content .read-more-link svg {
+  color: #ff4d72;
 }
 .app footer {
   margin-top: 24px;

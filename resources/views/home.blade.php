@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="content">
-    <h1 class="title">Kamma</h1>
+    <h1 class="title">Kamma Holding Text</h1>
 
     <p class="sub-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit.Accusamus, beatae? Lorem 
         ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, quam!</p>

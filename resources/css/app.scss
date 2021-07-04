@@ -22,6 +22,7 @@ body {
     header {
         display: flex;
         justify-content: center;
+        margin-bottom: 24px;
 
         // larger than mobile screen
         @media (min-width: 576px) { 
@@ -34,7 +35,52 @@ body {
     }
 
     .container {
-        background-color: white;
+        background-color: $white;
+
+        .content {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            padding: 32px;
+
+            .title {
+                font-size: 24px;
+                margin: 4px 0;
+            }
+
+            .sub-title {
+                font-size: 18px;
+                font-weight: 500;
+                width: 70%;
+            }
+
+            p {
+                .link {
+                    color: $secondary;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+
+            .read-more-link {
+                text-transform: uppercase;
+                color: gray;
+                text-align: right;
+                float: right;
+                text-decoration: none;
+
+                &:hover {
+                    color: $primary;
+                }
+
+                svg {
+                    color: $secondary;
+                } 
+            }
+        }
+
     }
 
     footer {
