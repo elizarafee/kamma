@@ -89,6 +89,23 @@ body {
         .mail-sending-form {
             padding: 64px;
 
+
+            .heading {
+                margin: 0;
+                padding: 4px 0;
+                font-size: 24px;
+                color: $black;
+            }
+
+            .sub-heading {
+                margin: 0;
+                margin-bottom: 16px;
+                padding: 4px 0;
+                font-size: 18px;
+                color: $grey;
+            }
+
+
             .form-input {
                 margin-bottom: 8px;
 
@@ -136,12 +153,8 @@ body {
                     cursor: pointer;
                 }
             }
-
           
         }
-
-
-
 
     }
 

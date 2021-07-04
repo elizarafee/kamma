@@ -3,6 +3,12 @@
 @section('content')
 
 <div class="mail-sending-form">
+
+
+<h1 class="heading">Send to a friend</h1>
+<h2 class="sub-heading">Share this great deal with friends!</h2>
+
+
     <form action="/emails" method="post">
         @csrf
         <div class="form-input">

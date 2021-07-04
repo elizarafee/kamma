@@ -62,6 +62,19 @@ body {
 .app .container .mail-sending-form {
   padding: 64px;
 }
+.app .container .mail-sending-form .heading {
+  margin: 0;
+  padding: 4px 0;
+  font-size: 24px;
+  color: black;
+}
+.app .container .mail-sending-form .sub-heading {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 4px 0;
+  font-size: 18px;
+  color: grey;
+}
 .app .container .mail-sending-form .form-input {
   margin-bottom: 8px;
 }
