@@ -236,4 +236,19 @@ body {
              }
         }
     }
+
+
+    .alert {
+        padding: 8px;
+        color: $black;
+
+        .alert-success {
+            background-color: lighten($primary, 0.8);
+            color: $white;
+        }
+
+        .alert-error {
+            background-color: $secondary;
+        }
+    }
 }
