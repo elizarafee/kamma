@@ -118,6 +118,17 @@ body {
   font-size: 24px;
   margin: 4px 0;
 }
+.app .container .mail-log .link {
+  display: block;
+  margin-top: 16px;
+  text-decoration: none;
+  color: #34485c;
+  text-transform: uppercase;
+}
+.app .container .mail-log .link:hover {
+  color: #ff4d72;
+  cursor: pointer;
+}
 .app .container .mail-log table {
   border-collapse: collapse;
   width: 100%;
@@ -169,4 +180,15 @@ body {
   .app footer .footer-list li:last-child {
     border-right: none;
   }
+}
+.app .alert {
+  padding: 8px;
+  color: black;
+}
+.app .alert .alert-success {
+  background-color: #354a5f;
+  color: white;
+}
+.app .alert .alert-error {
+  background-color: #ff4d72;
 }

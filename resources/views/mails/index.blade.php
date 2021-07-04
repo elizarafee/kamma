@@ -32,5 +32,9 @@
       </tr>
     </tbody>
   </table>
+
+
+  <a href="/emails/create" class="link">Send new email</a>
+
 </div>
 @endsection

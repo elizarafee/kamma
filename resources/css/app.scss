@@ -169,6 +169,19 @@ body {
                 margin: 4px 0;
             }
 
+            .link {
+                display: block;
+                margin-top: 16px;
+                text-decoration: none;
+                color: $primary;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $secondary;
+                    cursor: pointer;
+                }
+            }
+
             table {
                 border-collapse: collapse;
                 width: 100%;
