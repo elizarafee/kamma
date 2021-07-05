@@ -39,25 +39,24 @@ class MailController extends Controller
      */
     public function store(SendMailRequest $request)
     {
-        print_r($request->all());
+        try {
+            $mail_data = array(
+                'sender_name' => $request->get('name'),
+                'receiver_name' => $request->get('friend_name'),
+                'receiver_email' => $request->get('friend_email'),
+                'email_message' => 'Dummy text for the deal ...',
+                'created_at' => date('Y-m-d H:i:s')
+            );
 
+            // store the email info 
+            $email = MailLog::create($mail_data);
 
-        $mail_data = array(
-            'sender_name' => $request->get('name'),
-            'receiver_name' => $request->get('friend_name'),
-            'receiver_email' => $request->get('friend_email'),
-            'email_message' => 'Dummy text for the deal ...',
-            'created_at' => date('Y-m-d H:i:s')
-        );
+            //send the email
+            Mail::to($request->get('friend_email'))->send(new ShareDeal($email));
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Failed to send the email - (' . $e->getMessage() . ')');
+        }
 
-
-        $email = MailLog::create($mail_data);
-
-
-        Mail::to($request->get('friend_email'))->send(new ShareDeal($email));
-
-
-
-        return redirect('/emails')->with('success', 'Email successfully sent to '.$request->get('friend_name'));
+        return redirect('/emails')->with('success', 'Email successfully sent to ' . $request->get('friend_name'));
     }
 }

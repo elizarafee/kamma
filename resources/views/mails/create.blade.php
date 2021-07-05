@@ -3,11 +3,14 @@
 @section('content')
 
 <div class="mail-sending-form">
+    <h1 class="heading">Send to a friend</h1>
+    <h2 class="sub-heading">Share this great deal with friends!</h2>
 
-
-<h1 class="heading">Send to a friend</h1>
-<h2 class="sub-heading">Share this great deal with friends!</h2>
-
+    @if(session('error'))
+    <div class="alert alert-error">
+        {{ session('error') }}
+    </div>
+    @endif
 
     <form action="/emails" method="post">
         @csrf
