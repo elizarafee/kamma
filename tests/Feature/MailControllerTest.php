@@ -39,8 +39,16 @@ class MailControllerTest extends TestCase
      */
     public function test_email_store_page()
     {
-        $response = $this->post('/emails');
+        $this->withExceptionHandling();
 
-        $response->assertStatus(200);
+        // store the given form data
+        $response = $this->post('/emails', [
+            'name' => 'Eliza',
+            'friend_name' => 'Hasan',
+            'friend_email' => 'hasan@email.com',
+            'email_message' => 'Deal text ...'
+        ]);
+
+        $response->assertStatus(302);
     }
 }
