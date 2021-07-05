@@ -182,13 +182,15 @@ body {
   }
 }
 .app .alert {
-  padding: 8px;
+  padding: 12px;
   color: black;
+  border-radius: 5px;
+  margin: 8px 0px;
 }
-.app .alert .alert-success {
+.app .alert.alert-success {
   background-color: #354a5f;
   color: white;
 }
-.app .alert .alert-error {
+.app .alert.alert-error {
   background-color: #ff4d72;
 }

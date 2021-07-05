@@ -252,15 +252,17 @@ body {
 
 
     .alert {
-        padding: 8px;
+        padding: 12px;
         color: $black;
+        border-radius: 5px;
+        margin: 8px 0px;
 
-        .alert-success {
+        &.alert-success {
             background-color: lighten($primary, 0.8);
             color: $white;
         }
 
-        .alert-error {
+        &.alert-error {
             background-color: $secondary;
         }
     }

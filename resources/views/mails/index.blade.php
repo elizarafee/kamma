@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="mail-log">
-  <h1>Mail Log</h1>
+  <h1 class="title">Mail Log</h1>
 
   @if(session('success'))
   <div class="alert alert-success">

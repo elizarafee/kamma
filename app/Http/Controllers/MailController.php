@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 
 use App\Models\MailLog;
+use App\Mail\ShareDeal;
+use Illuminate\Support\Facades\Mail;
 use \App\Http\Requests\SendMailRequest;
 
 class MailController extends Controller
@@ -44,12 +46,16 @@ class MailController extends Controller
             'sender_name' => $request->get('name'),
             'receiver_name' => $request->get('friend_name'),
             'receiver_email' => $request->get('friend_email'),
-            'email_message' => 'Dummy text for email ...',
+            'email_message' => 'Dummy text for the deal ...',
             'created_at' => date('Y-m-d H:i:s')
         );
 
 
-        MailLog::create($mail_data);
+        $email = MailLog::create($mail_data);
+
+
+        Mail::to($request->get('friend_email'))->send(new ShareDeal($email));
+
 
 
         return redirect('/emails')->with('success', 'Email successfully sent to '.$request->get('friend_name'));
